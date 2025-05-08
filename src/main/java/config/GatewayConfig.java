@@ -10,7 +10,8 @@ public class GatewayConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder){
         return builder.routes()
-                .route("quick-cart-user-service-api",r->r.path("/user-service/**").uri("http://localhost:8082")).build();
+                .route("quick-cart-user-service-api",r->r.path("/user-service/**")
+                        .uri("http://localhost:8082")).build();
 
     }
 }
